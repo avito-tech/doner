@@ -1,0 +1,31 @@
+[package]
+name = "doner"
+version = "0.1.0"
+authors = [
+    "Sergey Noskov <snoskov@avito.ru>",
+    "Aleksey Moiseev <aamoiseev@avito.ru>",
+    "Aleksandr Kuporosov <avkuporosov@avito.ru>",
+    "Sergey Fedchenko <sfedchenko@avito.ru>",
+]
+
+[dependencies]
+futures = "^0.1"
+futures-cpupool = "^0.1"
+tokio-core = "^0.1"
+error-chain = "^0.10"
+derive-error-chain = "^0.10"
+serde = "^0.9"
+serde_derive = "^0.9"
+serde_json = "^0.9"
+amqp = "^0.0"
+docopt = "^0.7"
+rustc-serialize = "^0.3"
+slog = "^1.5"
+slog-term = "^1.5"
+hyper = "^0.11"
+quire = "^0.2"
+tokio-rustls = "^0.4"
+rustls = "^0.11"
+sha2 = "^0.4"
+tokio-proto = "0.1"
+tokio-service = "0.1"

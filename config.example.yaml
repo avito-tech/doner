@@ -1,0 +1,39 @@
+# downloading settings
+downloader:
+    #  number of worker threads
+    threads: 1
+    # number of DNS resolving threads
+    dns_threads: 1
+    # path to download storage
+    save_path: /var/downloads
+
+# Queue settings
+queues:
+    # global queue - where to take jobs from
+    job: doner.job.queue
+    # local queue where the job is placed
+    pending: doner.pending.queue
+
+# AMQP-server where global job is located
+amqp_remote:
+    host: 127.0.0.1
+    port: 5672
+    login: guest
+    password: guest
+
+# AMQP-server where local queue must be stored
+amqp_local:
+    host: 127.0.0.1
+    port: 5672
+    login: guest
+    password: guest
+
+# HTTP server where ready files are served from
+http:
+    host: 127.0.0.1
+    port: 8080
+    threads: 1
+
+# TLS client configuration
+tls:
+    ca_path: /etc/ssl/cert.pem

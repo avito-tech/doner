@@ -1,0 +1,37 @@
+digraph {
+    graph [rankdir=LR];
+
+    internet [shape=egg,scale=5,fontsize=32];
+
+    common [shape=record,label="{job | job | job}"];
+    local1  [shape=record,label="{pending| pending | pending}"];
+    local2  [shape=record,label="{pending| pending | pending}"];
+    localN  [shape=record,label="{pending| pending | pending}"];
+
+
+    results [shape=record,label="{result|error|result}"];
+
+    client -> common;
+
+    common -> local1;
+    common -> local2;
+    common -> localN;
+
+    local1 -> thread1;
+    local2 -> thread2;
+    localN -> threadN;
+
+   /* internet -> thread1;*/
+    //internet -> thread2;
+    //internet -> threadN;
+
+    thread1 -> internet;
+    thread2 -> internet;
+    threadN -> internet;
+
+    thread1 -> results;
+    thread2 -> results;
+    threadN -> results;
+
+}
+
